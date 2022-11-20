@@ -12,7 +12,6 @@ main {
     background-image:url(images/thin-bg.png);
     background-repeat: repeat-y;
     background-size:100%;
-    z-index:0;
     display:flex;
    
 }
@@ -36,17 +35,25 @@ section {
     
 }
 
+
+@keyframes peg-fly {
+    0% {transform:rotate(15deg);}
+    25% {transform:rotate(-15deg) translate(-200,-100px);}
+    100% {transform: translate(400px,-400px);}
+}
+
 .cloud {
     width:150vh;
     position:absolute;
     top: 50px;
     left:200px;
+    z-index:50;
     animation-name:cloud;
     animation-duration:2s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    z-index:50;
+    
 
 }
 
@@ -58,17 +65,28 @@ section {
     animation-delay:250ms;
 }
 
-@keyframes peg-fly {
-    0% {transform:rotate(15deg);}
-    25% {transform:rotate(-15deg) translate(-200,-100px);}
-    100% {transform: translate(400px,-400px);}
-}
-
 @keyframes cloud {
     0% {transform: translate(4px,-20px);}
     50% {transform: translate(-4px,20px);}
     100% {transform: translate(4px,-20px);}
 }
+
+.strawberry {
+    display:flex;
+    padding:80px;
+}
+
+.strawberry div:nth-child(1) {
+    flex:40%;
+}
+.strawberry div:nth-child(2) {
+    flex:60%;
+}
+
+.strawberry p {
+    margin-left:80px;
+}
+
 
 .blueberry {
     display:flex;
@@ -83,3 +101,17 @@ section {
 }
 
 .blueberry p {margin-left:80px;}
+
+.banana {
+    display:flex;
+    padding:80px;
+}
+
+.banana div:nth-child(1) {
+    flex:40%;
+}
+.banana div:nth-child(2) {
+    flex:60%;
+}
+
+.banana p {margin-left:80px;}
