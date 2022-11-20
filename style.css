@@ -1,7 +1,85 @@
 * {
-    box-sizing: border-box;
+    box-sizing:border-box;
 }
 
 body {
     margin: 0;
 }
+
+main {
+    width:500vw;
+    height:100vh;
+    background-image:url(images/thin-bg.png);
+    background-repeat: repeat-y;
+    background-size:100%;
+    z-index:0;
+    display:flex;
+   
+}
+
+section {
+    flex:100vw;
+    position: relative;
+    border:1px solid aqua;
+}
+
+.pegasus {
+    width:800px;
+    position:absolute;
+    bottom: 50px;
+    left:-400px;
+    z-index:100;
+    animation-name:peg-fly;
+    animation-delay: 2s;
+    animation-duration:4s;
+    animation-fill-mode: forwards;
+    
+}
+
+.cloud {
+    width:150vh;
+    position:absolute;
+    top: 50px;
+    left:200px;
+    animation-name:cloud;
+    animation-duration:2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    z-index:50;
+
+}
+
+.cloud1 {
+    width:250px;
+    position:absolute;
+    top: 400px;
+    left:600px;
+    animation-delay:250ms;
+}
+
+@keyframes peg-fly {
+    0% {transform:rotate(15deg);}
+    25% {transform:rotate(-15deg) translate(-200,-100px);}
+    100% {transform: translate(400px,-400px);}
+}
+
+@keyframes cloud {
+    0% {transform: translate(4px,-20px);}
+    50% {transform: translate(-4px,20px);}
+    100% {transform: translate(4px,-20px);}
+}
+
+.blueberry {
+    display:flex;
+    padding:80px;
+}
+
+.blueberry div:nth-child(1) {
+    flex:40%;
+}
+.blueberry div:nth-child(2) {
+    flex:60%;
+}
+
+.blueberry p {margin-left:80px;}
