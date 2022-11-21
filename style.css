@@ -1,215 +1,231 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
 
 @font-face {
-    font-family: childshand;
-    src: url(fonts/ChildsHand-x3OwO.ttf);
-  }
+  font-family: childshand;
+  src: url(fonts/ChildsHand-x3OwO.ttf);
+}
 
-  @font-face {
-    font-family: blackerpro;
-    src: url(fonts/Blacker-Pro-Display-Medium.otf);
-  }
+@font-face {
+  font-family: blackerpro;
+  src: url(fonts/Blacker-Pro-Display-Medium.otf);
+}
 
 * {
-    box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    margin: 0;
-    font-family: cabin;
-     font-weight: medium;
-     font-smooth: always;
-     color: #AD515A;
-     font-size: 18px;
-     line-height: 18px;
+  margin: 0;
+  margin: 0;
+  font-family: cabin;
+  font-weight: medium;
+  font-smooth: always;
+  color: #ad515a;
+  font-size: 18px;
+  line-height: 18px;
 }
 
 h1 {
-    margin: 0;
-    margin: 0;
-    font-family: blackerpro;
-     font-weight: 500;
-     font-smooth: always;
-     color: #AD515A;
-     font-size: 64px;
-     line-height: 65px;
+  margin: 0;
+  margin: 0;
+  font-family: blackerpro;
+  font-weight: 500;
+  font-smooth: always;
+  color: #ad515a;
+  font-size: 64px;
+  line-height: 65px;
 }
 
 h2 {
-    margin: 0;
-    margin: 0;
-    font-family: cabin;
-     font-weight: 500;
-     font-smooth: always;
-     color: #AD515A;
-     font-size: 36px;
-     line-height: 35px;
+  margin: 0;
+  margin: 0;
+  font-family: cabin;
+  font-weight: 500;
+  font-smooth: always;
+  color: #ad515a;
+  font-size: 36px;
+  line-height: 35px;
 }
 
 main {
-    width:500vw;
-    height:100vh;
-    background-image:url(images/thin-bg.png);
-    background-repeat: repeat-y;
-    background-size:100%;
-    display:flex;
-   
+  width: 500vw;
+  height: 100vh;
+  background-image: url(images/thin-bg.png);
+  background-repeat: repeat-y;
+  background-size: 100%;
+  display: flex;
 }
 
 section {
-    flex:100vw;
-    position: relative;
-    border:1px solid aqua;
+  flex: 100vw;
+  position: relative;
+  border: 1px solid aqua;
 }
 
 .pegasus {
-    width:800px;
-    position:absolute;
-    bottom: 50px;
-    left:-400px;
-    z-index:100;
-    animation-name:peg-fly;
-    animation-delay: 2s;
-    animation-duration:4s;
-    animation-fill-mode: forwards;
-    
+  width: 800px;
+  position: absolute;
+  bottom: 50px;
+  left: -400px;
+  z-index: 100;
+  animation-name: peg-fly;
+  animation-delay: 2s;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
 }
 
 .narwhal {
-    width:500px;
-    position:absolute;
-    bottom: 50px;
-    left:-400px;
-    z-index:100;
-    animation-name:peg-fly;
-    animation-delay: 5s;
-    animation-duration:4s;
-    animation-fill-mode: forwards;
-
+  width: 500px;
+  position: absolute;
+  bottom: 50px;
+  left: -400px;
+  z-index: 100;
+  animation-name: peg-fly;
+  animation-delay: 5s;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
 }
-
+.mercolumn {
+  position: relative;
+}
 .mermaid {
-    width:500px;
-    position:absolute;
-    bottom: 50px;
-    left:-400px;
-    z-index:100;
-    animation-name:peg-fly;
-    animation-delay: 7s;
-    animation-duration:4s;
-    animation-fill-mode: forwards;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  z-index: 5;
 }
-
-
-
-
 
 @keyframes peg-fly {
-    0% {transform:rotate(15deg);}
-    25% {transform:rotate(-15deg) translate(-200,-100px);}
-    100% {transform: translate(400px,-400px);}
+  0% {
+    transform: rotate(15deg);
+  }
+  25% {
+    transform: rotate(-15deg) translate(-200, -100px);
+  }
+  100% {
+    transform: translate(400px, -100px);
+  }
 }
 
 .cloud {
-    width:150vh;
-    position:absolute;
-    top: 50px;
-    left:200px;
-    z-index:50;
-    animation-name:cloud;
-    animation-duration:2s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    
-
+  width: 150vh;
+  position: absolute;
+  top: 50px;
+  left: 200px;
+  z-index: 50;
+  animation-name: cloud;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
-
+.bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.seaweed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 0;
+}
 .cloud1 {
-    width:250px;
-    position:absolute;
-    top: 400px;
-    left:600px;
-    animation-delay:250ms;
+  width: 250px;
+  position: absolute;
+  top: 400px;
+  left: 600px;
+  animation-delay: 250ms;
 }
 
 @keyframes cloud {
-    0% {transform: translate(4px,-20px);}
-    50% {transform: translate(-4px,20px);}
-    100% {transform: translate(4px,-20px);}
+  0% {
+    transform: translate(4px, -20px);
+  }
+  50% {
+    transform: translate(-4px, 20px);
+  }
+  100% {
+    transform: translate(4px, -20px);
+  }
 }
 
 .hero {
-    display:flex;
-    padding:80px;
+  display: flex;
+  padding: 80px;
 }
 
 .hero div:nth-child(1) {
-    flex:40%;
+  flex: 40%;
 }
 .hero div:nth-child(2) {
-    flex:60%;
+  flex: 60%;
 }
 
 .hero p {
-    margin-left:20px;
+  margin-left: 20px;
 }
 
 .strawberry {
-    display:flex;
-    padding:80px;
+  display: flex;
+  padding: 80px;
 }
 
 .strawberry div:nth-child(1) {
-    flex:40%;
+  flex: 40%;
 }
 .strawberry div:nth-child(2) {
-    flex:60%;
+  flex: 60%;
 }
 
 .strawberry p {
-    margin-left:80px;
+  margin-left: 80px;
 }
 
 .hero h1 {
-    margin: 0;
-    margin: 0;
-    font-family: blackerpro;
-     font-weight: 500;
-     font-smooth: always;
-     color: #D9ABB0;
-     font-size: 64px;
-     line-height: 65px;
-
+  margin: 0;
+  margin: 0;
+  font-family: blackerpro;
+  font-weight: 500;
+  font-smooth: always;
+  color: #d9abb0;
+  font-size: 64px;
+  line-height: 65px;
 }
 
 .blueberry {
-    display:flex;
-    padding:80px;
+  display: flex;
+  padding: 80px;
 }
 
 .blueberry div:nth-child(1) {
-    flex:40%;
+  flex: 40%;
 }
 .blueberry div:nth-child(2) {
-    flex:60%;
+  flex: 60%;
 }
 
-.blueberry p {margin-left:80px;}
-
+.blueberry p {
+  margin-left: 80px;
+}
 
 .banana {
-    display:flex;
-    padding:80px;
+  display: flex;
+  padding: 80px;
 }
 
 .banana div:nth-child(1) {
-    flex:40%;
+  flex: 40%;
 }
 .banana div:nth-child(2) {
-    flex:60%;
+  flex: 60%;
 }
 
-.banana p {margin-left:80px;}
-
+.banana p {
+  margin-left: 80px;
+}
