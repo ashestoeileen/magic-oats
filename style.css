@@ -90,10 +90,15 @@ section {
 }
 .mermaid {
   position: absolute;
-  top: 0;
+  top: 50;
   left: 0;
+  right: 300;
   width: 500px;
   z-index: 5;
+  animation-name: mer-fly;
+  animation-delay: 10s;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes peg-fly {
@@ -106,6 +111,20 @@ section {
   100% {
     transform: translate(400px, -100px);
   }
+  
+}
+
+@keyframes mer-fly {
+    0% {
+      transform: rotate(15deg);
+    }
+    25% {
+      transform: rotate(-15deg) translate(-200, -100px);
+    }
+    100% {
+      transform: translate(400px, -100px);
+    }
+
 }
 
 .cloud {
@@ -126,6 +145,11 @@ section {
   left: 0;
   right: 0;
   width: 100%;
+  animation-name: cloud;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 .seaweed {
   position: absolute;
@@ -239,6 +263,12 @@ section {
 .banana p {
   margin-left: 80px;
 }
+
+
+
+
+
+
 
 
 .hamburger-nav {
