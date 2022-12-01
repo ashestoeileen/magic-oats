@@ -14,6 +14,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   margin: 0;
   margin: 0;
@@ -61,6 +62,8 @@ section {
   position: relative;
   border: 1px solid aqua;
 }
+
+
 .arch-overlap {
   position: relative;
   z-index: 0;
@@ -90,7 +93,7 @@ section {
   bottom: 50px;
   left: -400px;
   z-index: 100;
-  animation-name: peg-fly;
+  animation-name: narwhal-fly;
   animation-delay: 5s;
   animation-duration: 4s;
   animation-fill-mode: forwards;
@@ -106,7 +109,7 @@ section {
   width: 500px;
   z-index: 5;
   animation-name: mer-fly;
-  animation-delay: 10s;
+  animation-delay: 8s;
   animation-duration: 4s;
   animation-fill-mode: forwards;
 }
@@ -124,6 +127,18 @@ section {
 }
 
 @keyframes mer-fly {
+  0% {
+    transform: rotate(15deg);
+  }
+  25% {
+    transform: rotate(-15deg) translate(-200, -100px);
+  }
+  100% {
+    transform: translate(400px, -100px);
+  }
+}
+
+@keyframes narwhal-fly {
   0% {
     transform: rotate(15deg);
   }
@@ -166,6 +181,11 @@ section {
   right: 0;
   width: 100%;
   z-index: 0;
+  animation-name: cloud;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 .cloud1 {
   width: 250px;
@@ -195,6 +215,7 @@ section {
 }
 .center-p5 h1 {
   padding-bottom: 20px;
+  padding-top: 50px;
 }
 .arch-p5 {
   position: absolute;
@@ -206,6 +227,20 @@ section {
   padding: 80px;
 }
 
+.twitter {
+  width: 40px;
+  height: 40px;
+}
+
+.tiktok {
+  width: 40px;
+  height: 40px;
+}
+
+.insta {
+  width: 40px;
+  height: 40px;
+}
 .hero div:nth-child(1) {
   flex: 40%;
 }
@@ -231,6 +266,7 @@ section {
 
 .strawberry p {
   margin-left: 80px;
+  padding-right: 300px;
 }
 
 .hero h1 {
@@ -244,6 +280,51 @@ section {
   line-height: 65px;
 }
 
+.page-three h1 {
+  margin: 0;
+  margin: 0;
+  font-family: blackerpro;
+  font-weight: 500;
+  font-smooth: always;
+  color: #4E60AB;
+  font-size: 64px;
+  line-height: 65px;
+}
+
+.blueberry p {
+  font-family: cabin;
+  font-weight: medium;
+  font-smooth: always;
+  color: #4E60AB;
+  font-size: 18px;
+  line-height: 18px;
+  margin-left: 80px;
+  padding-right: 300px;
+}
+
+.page-four h1 {
+  margin: 0;
+  margin: 0;
+  font-family: blackerpro;
+  font-weight: 500;
+  font-smooth: always;
+  color: #D9C511;
+  font-size: 64px;
+  line-height: 65px;
+}
+
+.banana p {
+  margin-left: 80px;
+  padding-right: 300px;
+  font-family: cabin;
+  font-weight: medium;
+  font-smooth: always;
+  color: #D9C511;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+
 .heroimg {
   padding: 30px;
   margin-right: 100px;
@@ -254,6 +335,11 @@ section {
 .herotext {
   margin-left: 100px;
   margin-top: 180px;
+}
+
+.logopink {
+  height: 20px;
+  width: 20px;
 }
 
 .blueberry {
@@ -268,9 +354,6 @@ section {
   flex: 60%;
 }
 
-.blueberry p {
-  margin-left: 80px;
-}
 
 .banana {
   display: flex;
@@ -284,159 +367,4 @@ section {
   flex: 60%;
 }
 
-.banana p {
-  margin-left: 80px;
-}
 
-.hamburger-nav {
-  display: flex;
-  width: 100vw;
-}
-/* START of desktop menu for 768 media query */
-.menu-desktop {
-  width: 100%;
-  display: block;
-  padding: 0;
-  line-height: 50px;
-  justify-content: space-evenly;
-  flex-direction: row;
-  height: 0;
-  text-align: right;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.menu-desktop a {
-  display: inline-flex;
-  margin-right: 30px;
-  height: 0;
-  line-height: 50px;
-  text-decoration: none;
-  color: #333;
-  justify-content: space-evenly;
-}
-.menu-desktop a:hover {
-  color: red;
-}
-
-.desktop {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.menu-mobile {
-  display: none;
-}
-/* END of desktop menu for 768 media query */
-
-/* medium to small devices (768px and smaller aka mobile) */
-@media only screen and (max-width: 768px) {
-  /* START of Mobile Menu */
-  .nav,
-  .desktop {
-    display: block;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    z-index: 900;
-  }
-
-  .icon {
-    position: fixed;
-    cursor: pointer;
-    top: 5%;
-    right: 0%;
-    width: 40px;
-    height: 45px;
-    transform: translate(-50%, -50%);
-    display: block;
-    z-index: 1000;
-  }
-
-  .hamburger {
-    width: 40px;
-    height: 4px;
-    line-height: 70px;
-    background: #666;
-    border-radius: 5px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: 0.5s;
-  }
-
-  .hamburger:before,
-  .hamburger:after {
-    content: '';
-    position: absolute;
-    width: 40px;
-    height: 4px;
-    background: #666;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: 0.5s;
-  }
-
-  .hamburger:before {
-    top: -10px;
-  }
-
-  .hamburger:after {
-    top: 10px;
-  }
-
-  .icon.active .hamburger {
-    background: rgba(0, 0, 0, 0);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
-  }
-
-  .icon.active .hamburger:before {
-    top: 0;
-    transform: rotate(45deg);
-  }
-
-  .icon.active .hamburger:after {
-    top: 0;
-    transform: rotate(135deg);
-  }
-
-  .menu-mobile {
-    background-color: #efefef;
-    height: 100vh;
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-    padding-top: 150px;
-    font-family: 'Helvetica', sans-serif;
-    text-align: center;
-  }
-
-  .menu-mobile,
-  .menu-mobile a {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-  .menu-mobile a {
-    clear: right;
-    text-decoration: none;
-    color: #333;
-    height: 70px;
-    line-height: 70px;
-  }
-  .menu-mobile a:hover {
-    color: red;
-  }
-
-  .desktop,
-  .menu-desktop,
-  .menu-mobile {
-    display: none;
-  }
-  /* END OF Mobile Menu */
-}
