@@ -55,6 +55,7 @@ main {
   background-repeat: repeat-y;
   background-size: 100%;
   display: flex;
+  z-index: -50;
 }
 
 section {
@@ -128,13 +129,13 @@ section {
 
 @keyframes mer-fly {
   0% {
-    transform: rotate(15deg);
+    transform: rotate(30deg);
   }
   25% {
     transform: rotate(-15deg) translate(-200, -100px);
   }
   100% {
-    transform: translate(400px, -100px);
+    transform: translate(200px, -100px);
   }
 }
 
@@ -155,7 +156,6 @@ section {
   position: absolute;
   top: 50px;
   left: 200px;
-  z-index: 50;
   animation-name: cloud;
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -163,11 +163,11 @@ section {
   animation-timing-function: ease-in-out;
 }
 .bubbles {
+  width: 150vh;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50px;
+  left: 200px;
   right: 0;
-  width: 100%;
   animation-name: cloud;
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -175,12 +175,11 @@ section {
   animation-timing-function: ease-in-out;
 }
 .seaweed {
+  width: 150vh;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50px;
+  left: 200px;
   right: 0;
-  width: 100%;
-  z-index: 0;
   animation-name: cloud;
   animation-duration: 2s;
   animation-fill-mode: forwards;
