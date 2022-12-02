@@ -9,6 +9,24 @@
     <script src="js/script.js"></script>
 </head>
 <body>
+    <header class="hamburger-nav">
+        <div class="logo">
+            <a href="#"><img src="images/pink-logo.png" /></a>
+        </div>
+        <nav class="nav">
+            <div class="icon">
+                <div class="hamburger"></div>
+            </div>
+            <div class="menu-mobile">
+                <a href="#intro-section">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+        
+    </header>
     <main>
         
         <section class="page-one hero">
@@ -100,5 +118,36 @@
     </main>
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/inview.min.js"></script>
+<script src="script.js"></script>
+<script>
+    console.log(direction)
+      $(".strawberry").waypoint(
+        function () {
+          $(".logo img").attr("src", "images/pink-logo.png")
+        },
+        { offset: "50%", horizontal: true }
+      )
+
+      $(".blueberry").waypoint(
+        function () {
+          $(".logo img").attr("src", "images/blue-logo.png")
+        },
+        { offset: "50%", horizontal: true }
+      )
+      $(".banana").waypoint(
+        function () {
+          $(".logo img").attr("src", "images/yellow-logo.png")
+        },
+        { offset: "50%", horizontal: true }
+      )
+      $(".subscribe").waypoint(
+        function () {
+          $(".logo img").attr("src", "images/pink-logo.png")
+        },
+        { offset: "50%", horizontal: true }
+      )
+    </script>
 </body>
 </html>

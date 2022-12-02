@@ -14,7 +14,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   margin: 0;
   margin: 0;
@@ -63,7 +62,6 @@ section {
   position: relative;
   border: 1px solid aqua;
 }
-
 
 .arch-overlap {
   position: relative;
@@ -286,7 +284,7 @@ section {
   font-family: blackerpro;
   font-weight: 500;
   font-smooth: always;
-  color: #4E60AB;
+  color: #4e60ab;
   font-size: 64px;
   line-height: 65px;
 }
@@ -295,7 +293,7 @@ section {
   font-family: cabin;
   font-weight: medium;
   font-smooth: always;
-  color: #4E60AB;
+  color: #4e60ab;
   font-size: 18px;
   line-height: 18px;
   margin-left: 80px;
@@ -308,7 +306,7 @@ section {
   font-family: blackerpro;
   font-weight: 500;
   font-smooth: always;
-  color: #D9C511;
+  color: #d9c511;
   font-size: 64px;
   line-height: 65px;
 }
@@ -319,11 +317,10 @@ section {
   font-family: cabin;
   font-weight: medium;
   font-smooth: always;
-  color: #D9C511;
+  color: #d9c511;
   font-size: 18px;
   line-height: 18px;
 }
-
 
 .heroimg {
   padding: 30px;
@@ -353,7 +350,6 @@ section {
 .blueberry div:nth-child(2) {
   flex: 60%;
 }
-
 
 .banana {
   display: flex;
@@ -387,41 +383,169 @@ section {
   cursor: pointer;
 }
 
-.button:hover {opacity: .5}
+.button:hover {
+  opacity: 0.5;
+}
 
 .row {
   display: flex;
   justify-content: center;
+  width: 80%;
+  margin: 100px auto;
 }
 
 .column {
-  
   flex: 33.33%;
   padding: 20px;
-  justify-content: center;
-
 }
 
-.thumbnail { 
-  top:-50px; 
-  left:-35px; 
-  display:block; 
-  z-index:999; 
-  cursor: pointer; 
-  -webkit-transition-property: all; 
-  -webkit-transition-duration: 0.3s; 
-  -webkit-transition-timing-function: ease; 
-  } 
-  
-  /*change the number below to scale to the appropriate size*/ 
-  .thumbnail:hover { 
-  transform: scale(1.5); 
-  
-  }
+.thumbnail {
+  top: -50px;
+  left: -35px;
+  display: block;
+  z-index: 999;
+  cursor: pointer;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+}
 
-  .shop-page {
-    background-image: url(images/thin-bg.png);
-    background-repeat: repeat-y;
-    
-  }
+/*change the number below to scale to the appropriate size*/
+.thumbnail:hover {
+  transform: scale(1.5);
+}
 
+.shop-page {
+  background-image: url(images/thin-bg.png);
+  background-repeat: repeat-y;
+}
+
+.hamburger-nav {
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  justify-content: center;
+}
+/* START of desktop menu for 768 media query */
+.logo img {
+  width: 160px;
+}
+.icon {
+  display: block;
+}
+.menu-mobile {
+  display: none;
+}
+
+/* START of Mobile Menu */
+.nav {
+  display: block;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 900;
+}
+
+.icon {
+  position: fixed;
+  cursor: pointer;
+  top: 5%;
+  right: 0%;
+  width: 40px;
+  height: 45px;
+  transform: translate(-50%, -50%);
+  display: block;
+  z-index: 1000;
+}
+
+.hamburger {
+  width: 40px;
+  height: 4px;
+  line-height: 70px;
+  background: #666;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+
+.hamburger:before,
+.hamburger:after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background: #666;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+
+.hamburger:before {
+  top: -10px;
+}
+
+.hamburger:after {
+  top: 10px;
+}
+
+.icon.active .hamburger {
+  background: rgba(0, 0, 0, 0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+}
+
+.icon.active .hamburger:before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.icon.active .hamburger:after {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.menu-mobile {
+  background-color: #efefef;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding-top: 150px;
+  font-family: 'Helvetica', sans-serif;
+  text-align: center;
+}
+
+.menu-mobile,
+.menu-mobile a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.menu-mobile a {
+  clear: right;
+  text-decoration: none;
+  color: #333;
+  height: 70px;
+  line-height: 70px;
+}
+.menu-mobile a:hover {
+  color: red;
+}
+
+.menu-mobile {
+  display: none;
+}
+/* END OF Mobile Menu */
+
+@media screen and (max-width: 768px) {
+  .herotext {
+    margin-left: 0;
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+}
