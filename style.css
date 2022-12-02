@@ -367,4 +367,61 @@ section {
   flex: 60%;
 }
 
+.button {
+  background-color: #ad515a;
+  border: none;
+  color: white;
+  border-radius: 25px 0px;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 28px;
+  font-family: childshand;
+  font-weight: 500;
+  font-smooth: always;
+  color: white;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {opacity: .5}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.column {
+  
+  flex: 33.33%;
+  padding: 20px;
+  justify-content: center;
+
+}
+
+.thumbnail { 
+  top:-50px; 
+  left:-35px; 
+  display:block; 
+  z-index:999; 
+  cursor: pointer; 
+  -webkit-transition-property: all; 
+  -webkit-transition-duration: 0.3s; 
+  -webkit-transition-timing-function: ease; 
+  } 
+  
+  /*change the number below to scale to the appropriate size*/ 
+  .thumbnail:hover { 
+  transform: scale(1.5); 
+  
+  }
+
+  .shop-page {
+    background-image: url(images/thin-bg.png);
+    background-repeat: repeat-y;
+    
+  }
 
