@@ -18,11 +18,12 @@
                 <div class="hamburger"></div>
             </div>
             <div class="menu-mobile">
-                <a href="#intro-section">Home</a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#contact">Contact</a>
+                <a href="#page-one">Home</a>
+                <a href="#page-two">Strawberry Dreams</a>
+                <a href="#page-three">Blueberry Bliss</a>
+                <a href="#page-four">Banana Bonanza</a>
+                <a href="#page-five">Subscribe</a>
+                <a href="#shop-page">Shop</a>
             </div>
         </nav>
         
@@ -122,7 +123,7 @@
 <script src="js/inview.min.js"></script>
 <script src="script.js"></script>
 <script>
-    console.log(direction)
+    
       $(".strawberry").waypoint(
         function () {
           $(".logo img").attr("src", "images/pink-logo.png")
@@ -147,6 +148,32 @@
           $(".logo img").attr("src", "images/pink-logo.png")
         },
         { offset: "50%", horizontal: true }
+      )
+
+      $(".strawberry").waypoint(
+        function () {
+          $(".logo img").attr("src", "images/pink-logo.png")
+        },
+        { offset: "-50%", horizontal: true }
+      )
+
+      $(".blueberry").waypoint(
+        function () {
+          $(".logo img").attr("src", "images/blue-logo.png")
+        },
+        { offset: "-50%", horizontal: true }
+      )
+      $(".banana").waypoint(
+        function () {
+          $(".logo img").attr("src", "images/yellow-logo.png")
+        },
+        { offset: "-50%", horizontal: true }
+      )
+      $(".subscribe").waypoint(
+        function () {
+          $(".logo img").attr("src", "images/pink-logo.png")
+        },
+        { offset: "-50%", horizontal: true }
       )
     </script>
 </body>
