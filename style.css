@@ -64,7 +64,7 @@ main {
 section {
   flex: 100vw;
   position: relative;
-  border: 1px solid aqua;
+  border: 0;
 }
 
 .arch-overlap {
@@ -156,7 +156,7 @@ section {
 .cloud {
   width: 150vh;
   position: absolute;
-  top: 50px;
+  top: 0px;
   left: 200px;
   animation-name: cloud;
   animation-duration: 2s;
@@ -167,7 +167,7 @@ section {
 .bubbles {
   width: 150vh;
   position: absolute;
-  top: 50px;
+  top: 0px;
   left: 200px;
   right: 0;
   animation-name: cloud;
@@ -179,7 +179,7 @@ section {
 .seaweed {
   width: 150vh;
   position: absolute;
-  top: 50px;
+  top: 0px;
   left: 200px;
   right: 0;
   animation-name: cloud;
