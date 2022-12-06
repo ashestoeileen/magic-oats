@@ -434,6 +434,7 @@ section {
 .logo img {
   width: 160px;
 }
+
 .icon {
   display: block;
 }
@@ -448,7 +449,6 @@ section {
 .nav {
   display: block;
   position: fixed;
-  top: 0px;
   left: 0px;
   width: 100%;
   z-index: 900;
@@ -516,7 +516,7 @@ section {
 }
 
 .menu-mobile {
-  background-color: #efefef;
+  background-color: #ad515a;
   height: 100vh;
   position: fixed;
   width: 100%;
@@ -540,7 +540,7 @@ section {
   line-height: 70px;
 }
 .menu-mobile a:hover {
-  color: red;
+  color: #d9abb0;
 }
 
 .menu-mobile {
@@ -605,8 +605,6 @@ section {
     margin: 0;
     font-family: cabin;
     font-weight: medium;
-    font-smooth: always;
-    color: #ad515a;
     font-size: 14px;
     line-height: 14px;
   }
@@ -622,7 +620,7 @@ section {
     position: relative;
     border: 1px solid aqua;
   }
-
+ 
   .arch {
     position: absolute;
     width: 273px;
@@ -648,7 +646,7 @@ section {
     width: 175px;
     position: absolute;
     bottom: 50px;
-    left: -400px;
+    left: -200px;
     z-index: 100;
     animation-name: narwhal-fly;
     animation-delay: 5s;
@@ -662,22 +660,92 @@ section {
     position: absolute;
     top: 50;
     left: 0;
-    right: 300;
+    right: 50;
     width: 200px;
     z-index: 5;
     animation-name: mer-fly;
-    animation-delay: 8s;
+    animation-delay: 6s;
     animation-duration: 4s;
     animation-fill-mode: forwards;
+  }
+
+  .cloud {
+    width: 200vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    animation-name: cloud;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  .bubbles {
+    width: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0;
+    display: none;
+    animation-name: cloud;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  .seaweed {
+    width: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0;
+    display: none;
+    animation-name: cloud;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  .cloud1 {
+    width: 0px;
+    position: absolute;
+    display: none;
+    top: 400px;
+    left: 600px;
+    animation-delay: 250ms;
   }
 
   .strawberry p,
   .blueberry p {
     margin-left: 0;
     padding-right: 0;
+    font-size: 14px;
+    line-height: 14px;
   }
+
+  .banana p {
+    margin-left: 0;
+    padding-right: 0;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
   .strawberry div:nth-child(2) {
     margin-top: 60px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .banana div:nth-child(2) {
+    margin-top: 60px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .blueberry div:nth-child(2) {
+    margin-top: 60px;
+    font-size: 14px;
+    line-height: 14px;
   }
 
   .hero h1 {
@@ -686,7 +754,6 @@ section {
     font-family: blackerpro;
     font-weight: 500;
     font-smooth: always;
-    color: #d9abb0;
     font-size: 35px;
     line-height: 35px;
   }
@@ -697,7 +764,6 @@ section {
     font-family: blackerpro;
     font-weight: 500;
     font-smooth: always;
-    color: #ad515a;
     font-size: 35px;
     line-height: 35px;
   }
@@ -708,35 +774,22 @@ section {
     font-family: blackerpro;
     font-weight: 500;
     font-smooth: always;
-    color: #4e60ab;
     font-size: 35px;
     line-height: 35px;
   }
 
   .page-four h1 {
-    margin: 0;
-    margin: 0;
     font-family: blackerpro;
     font-weight: 500;
     font-smooth: always;
-    color: #d9c511;
     font-size: 35px;
     line-height: 35px;
   }
 
-  .banana p {
-    margin-left: 80px;
-    padding-right: 300px;
-    font-family: cabin;
-    font-weight: medium;
-    font-smooth: always;
-    color: #d9c511;
-    font-size: 14px;
-    line-height: 14px;
-  }
+  
 
   .center-p5 {
-    width: 273px;
+    width: 400px;
     padding: 30px;
     margin: auto;
     margin-top: 150px;
@@ -746,15 +799,16 @@ section {
   .center-p5 h1 {
     padding-bottom: 10px;
     padding-top: 10px;
-    font-size: 26px;
-    line-height: 20px;
+    font-size: 35px;
+    line-height: 35px;
   }
   .arch-p5 {
     position: absolute;
-    width: 273px;
-    padding: 30px;
+    width: 300px;
+    padding: 10px;
     top: 0;
     left: 0;
+    
   }
 
   .subscribe {

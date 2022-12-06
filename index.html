@@ -17,19 +17,19 @@
                 <div class="hamburger"></div>
             </div>
             <div class="menu-mobile">
-                <a href="#page-one">Home</a>
-                <a href="#page-two">Strawberry Dreams</a>
-                <a href="#page-three">Blueberry Bliss</a>
-                <a href="#page-four">Banana Bonanza</a>
-                <a href="#page-five">Subscribe</a>
-                <a href="#shop-page">Shop</a>
+                <a href="#home">Home</a>
+                <a href="#straw">Strawberry Dreams</a>
+                <a href="#blue">Blueberry Bliss</a>
+                <a href="#banana">Banana Bonanza</a>
+                <a href="#subscribe">Subscribe</a>
+                <a href="#shop">Shop</a>
             </div>
         </nav>
         
     </header>
     <main>
         
-        <section id="page-one" class="page-one hero">
+        <section id="home" class="page-one hero">
         
             <div class="herotext">
                 <h1>Life’s A 
@@ -50,7 +50,7 @@
             </div>
         </section>
 
-        <section class="page-two strawberry">
+        <section id="straw" class="page-two strawberry">
         
         
         <div>&nbsp;</div>
@@ -68,7 +68,7 @@
         </div>
         </section>
 
-        <section class="page-three blueberry">
+        <section id="blue" class="page-three blueberry">
             <div>
                 <img class="narwhal" src="images/blueberry-narwhal.png">
             <img class="bubbles" src="images/blueberry-bg.png">
@@ -82,7 +82,7 @@
           
         </section>
 
-        <section class="page-four banana">
+        <section id="banana" class="page-four banana">
             <div>&nbsp;</div>
                 <div>
                 <h1>Banana 
@@ -96,11 +96,11 @@
         </section>
 
 
-        <section class="page-five subscribe">
+        <section id="subscribe" class="page-five subscribe">
             <div class="center-p5">
-                <h1>Life’s A 
-                <br>Magical Place,
-                <br>Drink up!
+                <h1>Keep up 
+                <br>with the
+                <br>Magic!
                 </h1>
             <img class="arch-p5" src="images/pink-arch-outline.png">
             <img class="subscribe" src="images/email-button.png">
@@ -149,31 +149,6 @@
         { offset: "50%", horizontal: true }
       )
 
-      $(".strawberry").waypoint(
-        function () {
-          $(".logo img").attr("src", "images/pink-logo.png")
-        },
-        { offset: "-50%", horizontal: true }
-      )
-
-      $(".blueberry").waypoint(
-        function () {
-          $(".logo img").attr("src", "images/blue-logo.png")
-        },
-        { offset: "-50%", horizontal: true }
-      )
-      $(".banana").waypoint(
-        function () {
-          $(".logo img").attr("src", "images/yellow-logo.png")
-        },
-        { offset: "-50%", horizontal: true }
-      )
-      $(".subscribe").waypoint(
-        function () {
-          $(".logo img").attr("src", "images/pink-logo.png")
-        },
-        { offset: "-50%", horizontal: true }
-      )
     </script>
 </body>
 </html>

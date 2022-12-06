@@ -7,8 +7,26 @@
     <title>Shop</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+  
   <body>
-    <div class="row">
+    <header class="hamburger-nav">
+      <nav class="nav">
+          <div class="icon">
+              <div class="hamburger"></div>
+          </div>
+          <div class="menu-mobile">
+              <a href="#home">Home</a>
+              <a href="#straw">Strawberry Dreams</a>
+              <a href="#blue">Blueberry Bliss</a>
+              <a href="#banana">Banana Bonanza</a>
+              <a href="#subscribe">Subscribe</a>
+              <a href="#shop">Shop</a>
+          </div>
+      </nav>
+      
+  </header>
+  
+    <div id="shop" class="row">
       <div class="column">
         <img src="images/shop-left.png" alt="Blueberry" class="thumbnail" height="327" width="247" />
         <br />Blueberry Bliss
@@ -23,4 +41,10 @@
       </div>
     </div>
   </body>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/inview.min.js"></script>
+  <script src="script.js"></script>
 </html>
+
